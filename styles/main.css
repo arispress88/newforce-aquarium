@@ -1,0 +1,61 @@
+/* Title of page */
+.pageHeader {
+width: 1000px;
+height: 85px;
+background: #9AEAF4;
+font-size: 63px;
+font-style: bold;
+text-align: center;
+align-content: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: teal;
+    
+}
+
+#fish {
+    background-color: antiquewhite;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 227px;
+    height: 2550px;
+    }
+
+h2 {
+    color: coral;
+    font-size: medium;
+    font-style: oblique;
+}
+
+.tips{
+    width: 227px;
+    height: 450px;
+    margin: 1em;
+    font-style: normal;
+    background-color: orangered;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: baseline;
+    float: right;
+    
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quotes{
+    display: flex;
+    background-color: blanchedalmond;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 1em;
+}
