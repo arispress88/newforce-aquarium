@@ -6,7 +6,7 @@ export const FishList = () => {
     const fishes = getFish()
 
     // Start building a string filled with HTML syntax
-    let htmlString = '<article class="fishList">'
+    let htmlString = ''
 
     // Create HTNL representations of each fish here
     for (const singleFish of fishes) {
@@ -22,7 +22,7 @@ export const FishList = () => {
         </section>
 `
     }
-    htmlString += `</article>`
+    
 
     return htmlString
 }

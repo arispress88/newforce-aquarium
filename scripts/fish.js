@@ -1,9 +1,3 @@
-/*
- *  To get you started, here's some properties of Bart.
- *  You need to add more properties to complete his
- *  representation as an object. Then add all the other
- *  fish to the collection.
- */
 const database = {
     fish: [
         {
@@ -11,7 +5,7 @@ const database = {
             species: "Ocean Sunfish",
             name: "Charles",
             food: "Crustaceans",
-            size: "1.8m",
+            size: 15,
             location: "Monterey Bay, California, USA"
         },
         
@@ -20,7 +14,7 @@ const database = {
             species: "Southern Stingray",
             name: "Stella",
             food: "Small fish",
-            size: "150cm",
+            size: 12,
             location: "Tampa, Florida, USA"
         },
         
@@ -29,7 +23,7 @@ const database = {
             species: "Sand Tiger Shark",
             name: "James",
             food: "Bony fish",
-            size: "2.5m",
+            size: 11,
             location: "New South Wales, Austrailia"
         },
 
@@ -38,7 +32,7 @@ const database = {
             species: "Blue Tang",
             name: "Dory",
             food: "Plankton",
-            size: "30cm",
+            size: 10,
             location: "Great Barrier Reef, Austrailia"
         },
 
@@ -47,15 +41,50 @@ const database = {
             species: "Clownfish",
             name: "Nemo",
             food: "Algae",
-            size: "10cm",
+            size: 3,
             location: "Sydney, Austrailia"
         },
         
     ]
 }
 
+const newSortedArray = []
 
+export const mostHolyFish = () => {
+    // 3, 6, 9, 12, etc... fish
+    const holyFish = []
 
-export const getFish = () => {
-    return database.fish.map(copyOfSingleFishObject => ({...copyOfSingleFishObject}))
+    for (const fish of database.fish) {
+        if(fish.size % 3 === 0) {
+            newSortedArray.push(fish)
+        }
+
+    }
+
+    return holyFish
 }
+
+export const soldierFish = () => {
+    const armyFish = []
+
+    for (const fish of database.fish) {
+        if (fish.size % 5 === 0) {
+            newSortedArray.push(fish)
+        }
+    }
+    // 5, 10, 15, 20, 25, etc... fish
+    return soldiers
+}
+
+export const nonHolyFish = () => {
+    const nonBelievers = []
+
+    for (const fish of database.fish) {
+        if ((fish.size % 5 !== 0) && (fish.size % 3 !== 0))  {
+            newSortedArray.push(fish)
+        }
+    }
+    // Any fish not a multiple of 3 or 5
+    return regularFish
+}
+
